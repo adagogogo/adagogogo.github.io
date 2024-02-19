@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Lingli Guo's Portfolio</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  <!-- =======================================================
+  * Template Name: MyResume - v4.9.2
+  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-lg-none"></i>
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex flex-column justify-content-center">
+  </header>
+  <!-- End Header -->
+
+  <!-- ======= Services Section ======= -->
+  <section id="services" class="services">
+    <div class="container" data-aos="fade-up">
+      <div class="row">
+        <div style="text-align: left; width: 40%; margin-bottom: 0%; margin-top: 5%;">
+          <h2 style="color:#085a98;">TED Talks Scraping</h2>
+          <h2>A Python project combining frontend scraping and API techniques to extract title, speaker, duration,
+            views, and tags from TED Talks webpages.</h2>
+        </div>
+
+        <div style="width:20%; ">
+          <picture style="margin-left: 30%; ">
+            <img src="assets/img/data-scraping/ted-logo.png"
+              style="width:700px; height:auto; padding-top: 10%; padding-right: 35%;padding-top: 30%;">
+          </picture>
+        </div>
+      </div>
+
+      <div class="icon-box iconbox-teal" data-aos="zoom-in" data-aos-delay="300"
+        style="width: 100%; margin-top: 20px;margin-bottom: 20px;">
+        <h2
+          style="font-family: 'Poppins', sans-serif; font-size: 24px; color: #f8893f; margin-bottom: 20px; text-align: left;">
+          Why TED Talks?</h2>
+        <p style="text-align: justify; font-size: 14px;">TED Talks, originating in 1984 as a convergence of Technology,
+          Entertainment, and Design, has grown into a diverse global platform featuring <b>over 6000 talks</b> covering
+          a wide array of topics from science and business to arts and global issues.
+          <br><br>My personal motivation for scraping TED Talks data stems from a profound inspiration drawn from
+          numerous
+          talks, fueling a strong interest in exploring and understanding the nuances and impact of these influential
+          presentations.
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4 col-md-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100"
+          style="margin-top: 3%; width: 100%;">
+          <div class="icon-box iconbox-blue">
+            <h4><a style="color: rgb(0, 87, 105);" href="">How many pages to scrape?</a></h4>
+            <br>
+            <div class="row">
+              <img src="assets/img/data-scraping/ted-main-page.png" style="width:40%;margin-left: 8%;">
+              <img src="assets/img/data-scraping/ted-detail-page.png" style="width:40%; margin-left: 3%;">
+              <p
+                style="text-align: justify; font-size: 12px;  margin-left: 9%;width: 80%; margin-right: 3%; margin-top: 4%;">
+                The answer is <b>two</b>.
+                <br>1. One is the <b>main page</b>, the main purpose is to <b>get all urls</b>.
+                <br>2. The other one is the <b>detail page</b> of each talk. Use the urls scraped from main page, to
+                <b>extract the rest data</b>.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-title" style="font-size: 20px; margin-top: 5%; margin-bottom: 0%;">
+          <h2>Extract Page 1 - Main Page</h2>
+        </div>
+
+        <div class="col-lg-4 col-md-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100"
+          style="width:100%;">
+          <div class="icon-box iconbox-blue">
+            <h4><a style="color: rgb(0, 87, 105);" href="">Method 1 - From Frontend</a></h4>
+            <br>
+            <div class="row">
+              <p style="text-align: justify; font-size: 12px; width: 40%; margin-left: 5%;">
+                <b>What data to extract?</b>
+                <br>objectID (talk ID), url, duration (video length), title, speakers
+                <br><br>
+                <b>Analyze the page</b>
+                <br>At the moment I started scraping, there were <b>6271 talks</b> available. However, only 24 talks
+                loaded initially on the first page. Subsequently, clicking the 'Show 24 more' button reveals an
+                additional set of 24 talks with each click, totaling <b>approximately 261 clicks</b> required to view
+                all 6271 talks.
+                <br><br>
+                <b>Steps (see the right picture)</b>
+                <br>1. Loop to click "Show 24 more" button until loading whole talks.
+                <br>2. Download data including all urls.
+                <br><br>
+                <b>Problems</b>
+                <br>1. <b>Time-Consuming</b>: The process requires over 260 clicks, accompanied by a waiting period of
+                several seconds for each new talk to load.
+                <br>2. <b>Network Risks</b>: Any network error encountered during the process necessitates restarting
+                from the beginning.
+                <br><br>
+                <b>Result</b>
+                <br>After spending hours on downloading without completion, I decided to <b>switch strategies and use an
+                  API instead</b>.
+              </p>
+              <img src="assets/img/data-scraping/ted-main-page-method1.png" style="width:40%;margin-left: 8%;">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100"
+          style="width:100%;">
+          <div class="icon-box iconbox-blue">
+            <h4><a style="color: rgb(0, 87, 105);" href="">Method 2 - Use API</a></h4>
+            <br>
+            <div class="row">
+              <img src="assets/img/data-scraping/ted-main-page-method2-1.png" style="width:40%;margin-left: 8%;height: 80%;">
+              <img src="assets/img/data-scraping/ted-main-page-method2-2.png" style="width:40%;margin-left: 8%;">
+              <p
+                style="text-align: justify; font-size: 12px;  margin-left: 9%;width: 80%; margin-right: 3%; margin-top: 4%;">
+                <b>Analyze the page</b>
+                <br>1. Upon inspecting the page, it's observed that a POST request is dispatched to a specific URL,
+                carrying the pre-arranged payload.
+                <br>2. The response, delivered in JSON format, contains all the relevant data.
+                <br><br>
+                <b>Steps</b>
+                <br>1. Function Definition (fetch_all_pages)
+                <br>2. Data Fetching in a Loop
+                <br>3. Making the Request
+                <br>4. Processing Response Data
+                <br>5. Progress Tracking
+                <br>6. Return Fetched Data
+                <br>7. Saving Data to CSV
+                <br><br>
+                <b>Result</b>
+                <br>The approach proved highly effective, enabling the retrieval of data in <b>just a few minutes</b>.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-title" style="font-size: 20px; margin-top: 5%; margin-bottom: 0%;">
+          <h2>Extract Page 2 - Detail Page</h2>
+        </div>
+
+        <div class="col-lg-4 col-md-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100"
+          style="width:100%;">
+          <div class="icon-box iconbox-blue">
+            <h4><a style="color: rgb(0, 87, 105);" href="">Method - From Frontend</a></h4>
+            <br>
+            <div class="row">
+              <p style="text-align: justify; font-size: 12px; width: 40%; margin-left: 5%;">
+                <b>What data to extract?</b>
+                <br>view, date, context, description, tag
+                <br><br>
+                <b>Analyze the page</b>
+                <br>1. Views: For "18,675 views", extract only the numerical part, without the word "views".
+                <br>2. Date: For "• October 2023", remove the "•" symbol to isolate the date.
+                <br>3. The majority of the data elements can be identified using the 'data-testid' attribute.
+                <br>4. Tag: Tags are identified not by an ID but by the class attribute 'underline'.
+                <br><br>
+                <b>Steps</b>
+                <br>1. Define fetch_additional_data Function
+                <br>2. Opens an input CSV file extracted from main page for reading and an output file for writing.
+                <br>3. Iterate over each row in the input CSV file.
+                <br>4. Output final CSV file including all data.
+                <br><br>
+                <b>Result</b>
+                <br>This process required several hours to extract information for over 6000 talks</b>.
+              </p>
+              <img src="assets/img/data-scraping/ted-detail-page-method.png" style="width:40%;margin-left: 8%;">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100"
+          style="margin-top: 3%; width: 100%;">
+          <div class="icon-box iconbox-blue">
+            <h4><a style="color: rgb(0, 87, 105);" href="">Final Data</a></h4>
+            <br>
+            <div class="row">
+              <img src="assets/img/data-scraping/final-data2.png" style="width:100%; margin-left: 0%;height: auto;">
+              <p
+                style="text-align: justify; font-size: 12px;  margin-left: 0%;width: 80%; margin-right: 2%; margin-top: 0%; width: 100%;">
+                <br>Successfully extracted <b>6268 talks</b>. The next step involves data cleaning.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+
+      <style>
+        .download-button {
+          display: inline-block;
+          padding: 12px 24px;
+          font-size: 16px;
+          font-weight: bold;
+          text-align: center;
+          text-decoration: none;
+          background-color: #1d66a6;
+          color: #ffffff;
+          border-radius: 4px;
+          border: none;
+          transition: background-color 0.3s ease;
+        }
+
+        .download-button:hover {
+          background-color: #ffffff;
+        }
+      </style>
+
+      <a href="https://github.com/adagogogo/TED-Talks-Scraper" download class="download-button">Download Code</a>
+
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: [license-url] -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/ -->
+        <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
