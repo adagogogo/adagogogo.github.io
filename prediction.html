@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Lingli Guo's Portfolio</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  <!-- =======================================================
+  * Template Name: MyResume - v4.9.2
+  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-lg-none"></i>
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex flex-column justify-content-center">
+  </header>
+  <!-- End Header -->
+
+  <!-- ======= Services Section ======= -->
+  <section id="services" class="services">
+    <div class="container" data-aos="fade-up">
+      <div class="row">
+
+        <div style="text-align: left; width: 40%; margin-bottom: 0%; margin-top: 5%;">
+          <h2 style="color:#085a98;">Predictive Modeling</h2>
+          <h2>Employing advanced NLP techniques like TF-IDF, sentiment analysis, alongside comprehensive machine
+            learning with models including Random Forest and SVR.</h2>
+        </div>
+
+        <div style="width:20%; ">
+          <picture style="margin-left: 30%; ">
+            <img src="assets/img/prediction/ml-3.PNG"
+              style="width:700px; height:300px; padding-top: 10%; padding-right: 35%;">
+          </picture>
+        </div>
+      </div>
+
+      <div class="icon-box iconbox-teal" data-aos="zoom-in" data-aos-delay="300"
+        style="width: 100%; margin-top: 20px;margin-bottom: 20px;">
+        <h2
+          style="font-family: 'Poppins', sans-serif; font-size: 24px; color: #f8893f; margin-bottom: 20px; text-align: left;">
+          What to predict?</h2>
+        <p style="text-align: justify; font-size: 14px;">
+          To predict the <b>POPULARITY</b> of TED Talks based on various features extracted from the talk details.
+        </p>
+      </div>
+
+      <div class="row">
+
+        <div class="col-lg-4 col-md-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100"
+          style="width:100%;">
+          <div class="icon-box iconbox-blue">
+            <h4><a style="color: rgb(0, 87, 105);" href="">What data to use?</a></h4>
+            <br>
+            <div class="row">
+              <p style="text-align: justify; font-size: 12px; width: 30%; margin-left: 5%;">
+                <b>How to define POPULARITY?</b>
+                <br>Popularity is represented by <b>a categorical number ranging from 1 to 8</b>, determined by the
+                number of views.
+                <br>As views increase, so does popularity. For instance, 1-9 views correspond to a popularity score of
+                1, while 10-11 views indicate a score of 2, and so on. With the highest view count recorded at
+                76,384,176, the maximum popularity score is 8.
+                <br>
+                <br><b>Data Cleaning</b>
+                <br>- <b>Retaining Relevant Information</b>: Retain data attributes crucial for audience access, such
+                as "speaker", "title", "length", and "tag".
+                <br>- <b>Formatting Data</b>: Transform the date column into numerical features, specifically "year" and
+                "month."
+                <br>- <b>Eliminating Redundancy</b>: Remove unnecessary columns from the dataset.
+              </p>
+              <p style="width:60%;">
+                <img src="assets/img/prediction/ml-1.PNG" style="width:100%;">
+                <img src="assets/img/prediction/ml-2.PNG" style="width:70%;">
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100"
+          style="width:100%;">
+          <div class="icon-box iconbox-blue">
+            <h4><a style="color: rgb(0, 87, 105);" href="">Modeling</a></h4>
+            <div class="row">
+              <img src="assets/img/prediction/ml-3.png" style="width:100%;">
+              <p style="text-align: left; font-size: 12px; width: 90%; margin-left: 5%;">
+              <ul style="font-size: 12px; text-align: left;width: 90%; margin-left: 5%;">
+                <strong>Data Preprocessing</strong>
+                <ul>
+                  <li>Transform categorical variables (speaker, title, tag) using techniques like one-hot encoding.
+                  </li>
+                  <li>Standardize or normalize the length column to ensure consistency in scaling.</li>
+                </ul>
+                <strong>Model Selection</strong>
+                <ul>
+                  <li>Split the data into training, validation, and testing sets to ensure robust model evaluation.
+                  </li>
+                  <li>Test different models such as Linear Regression, Random Forest, Gradient Boosting, SVR, and
+                    Decision Tree.</li>
+                  <li>Utilize Grid Search for hyperparameter tuning of each model to optimize performance.</li>
+                </ul>
+                <strong>Model Evaluation</strong>
+                <ul>
+                  <li>Choose the model with the best performance based on cross-validation scores, particularly
+                    focusing on neg_mean_squared_error.</li>
+                  <li>Compare the models' performance with the best-found hyperparameters to determine the most
+                    suitable model for the task.</li>
+                </ul>
+                <strong>Prediction</strong>
+                <ul>
+                  <li>Select the best-performing model and its corresponding hyperparameters.</li>
+                  <li>Train this model on the full training dataset to maximize its learning potential.</li>
+                  <li>Evaluate the model's performance on the test set using metrics such as Mean Squared Error and R²
+                    to assess its predictive capabilities.</li>
+                </ul>
+              </ul>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100"
+          style="width:100%;">
+          <div class="icon-box iconbox-blue">
+            <h4><a style="color: rgb(0, 87, 105);" href="">Optimization</a></h4>
+            <div class="row">
+              <img src="assets/img/prediction/ml-4.png" style="width:100%;">
+              <p style="text-align: justify; font-size: 12px; width: 90%; margin-left: 5%;">
+                <br>- The addition of TF-IDF features in Round 2 enhanced the models' performance significantly,
+                indicating the importance of textual data in predicting TED Talks' popularity.
+                <br>- The incorporation of sentiment analysis in Round 3 did not yield a substantial improvement,
+                slightly reducing the test performance.
+                <br>- SVR emerged as the best model in Rounds 2 and 3, indicating its effectiveness in handling the
+                complex feature space created by TF-IDF and sentiment analysis.
+                <br>- Despite enhancements, the overall R² Scores remained low across all rounds, suggesting that other
+                unexplored features or more advanced modeling techniques could be necessary for better prediction
+                accuracy.
+                <br><br>
+                This analysis indicates that while text-based features (TF-IDF and sentiment) add value, there is room
+                for further exploration, possibly through more advanced NLP techniques or different modeling approaches,
+                to better capture the factors driving the popularity of TED Talks.
+                </b>
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+
+      <style>
+        .download-button {
+          display: inline-block;
+          padding: 12px 24px;
+          font-size: 16px;
+          font-weight: bold;
+          text-align: center;
+          text-decoration: none;
+          background-color: #1d66a6;
+          color: #ffffff;
+          border-radius: 4px;
+          border: none;
+          transition: background-color 0.3s ease;
+        }
+
+        .download-button:hover {
+          background-color: #ffffff;
+        }
+      </style>
+
+      <a href="https://github.com/adagogogo/TED_Talks_Popularity_Prediction" download
+        class="download-button">Download Code</a>
+
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: [license-url] -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/ -->
+        <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
