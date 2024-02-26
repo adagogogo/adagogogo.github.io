@@ -56,7 +56,7 @@
         <div style="text-align: left; width: 40%; margin-bottom: 0%; margin-top: 5%;">
           <h2 style="color:#085a98;">Predictive Modeling</h2>
           <h2>Employing advanced NLP techniques like TF-IDF, sentiment analysis, alongside comprehensive machine
-            learning with models including Random Forest and SVR.</h2>
+            learning with models including Random Forest and SVC.</h2>
         </div>
 
         <div style="width:20%; ">
@@ -126,14 +126,14 @@
                 <ul>
                   <li>Split the data into training, validation, and testing sets to ensure robust model evaluation.
                   </li>
-                  <li>Test different models such as Linear Regression, Random Forest, Gradient Boosting, SVR, and
+                  <li>Test different models such as Random Forest, Gradient Boosting, SVC, and
                     Decision Tree.</li>
                   <li>Utilize Grid Search for hyperparameter tuning of each model to optimize performance.</li>
                 </ul>
                 <strong>Model Evaluation</strong>
                 <ul>
                   <li>Choose the model with the best performance based on cross-validation scores, particularly
-                    focusing on neg_mean_squared_error.</li>
+                    focusing on f1 score.</li>
                   <li>Compare the models' performance with the best-found hyperparameters to determine the most
                     suitable model for the task.</li>
                 </ul>
@@ -141,7 +141,7 @@
                 <ul>
                   <li>Select the best-performing model and its corresponding hyperparameters.</li>
                   <li>Train this model on the full training dataset to maximize its learning potential.</li>
-                  <li>Evaluate the model's performance on the test set using metrics such as Mean Squared Error and R²
+                  <li>Evaluate the model's performance on the test set using metrics such as accuracy
                     to assess its predictive capabilities.</li>
                 </ul>
               </ul>
@@ -157,19 +157,20 @@
             <div class="row">
               <img src="assets/img/prediction/ml-4.png" style="width:100%;">
               <p style="text-align: justify; font-size: 12px; width: 90%; margin-left: 5%;">
-                <br>- The addition of TF-IDF features in Round 2 enhanced the models' performance significantly,
-                indicating the importance of textual data in predicting TED Talks' popularity.
-                <br>- The incorporation of sentiment analysis in Round 3 did not yield a substantial improvement,
-                slightly reducing the test performance.
-                <br>- SVR emerged as the best model in Rounds 2 and 3, indicating its effectiveness in handling the
-                complex feature space created by TF-IDF and sentiment analysis.
-                <br>- Despite enhancements, the overall R² Scores remained low across all rounds, suggesting that other
-                unexplored features or more advanced modeling techniques could be necessary for better prediction
-                accuracy.
+                <br><b>- Consistent Performance of SVC</b>: Across all rounds, SVC consistently outperformed other models.
+                This indicates its suitability for the dataset and feature set.
+                <br><b>- Impact of Textual Features</b>: The introduction of TF-IDF vectorization in Round 2 significantly
+                improved the model performances, highlighting the importance of textual data in the dataset.
+                <br><b>- Effect of Sentiment Analysis</b>: The addition of sentiment analysis in Round 3 did not improve
+                the SVC's performance as expected. This might be due to the nature of the 'title' data or the way
+                sentiment scores interact with other features. It's possible that the sentiment of a title might not be
+                as predictive for popularity as the content of the title itself.
                 <br><br>
-                This analysis indicates that while text-based features (TF-IDF and sentiment) add value, there is room
-                for further exploration, possibly through more advanced NLP techniques or different modeling approaches,
-                to better capture the factors driving the popularity of TED Talks.
+                This analysis indicates that while text-based features (TF-IDF and sentiment) add value to the
+                predictive models, there is room for further exploration. Future steps might include experimenting with
+                more advanced NLP techniques, exploring different feature sets, or employing more complex modeling
+                approaches. These efforts aim to better capture the multifaceted factors driving the popularity of TED
+                Talks.
                 </b>
               </p>
             </div>
@@ -205,8 +206,8 @@
         }
       </style>
 
-      <a href="https://github.com/adagogogo/TED_Talks_Popularity_Prediction" download
-        class="download-button">Download Code</a>
+      <a href="https://github.com/adagogogo/TED_Talks_Popularity_Prediction" download class="download-button">Download
+        Code</a>
 
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
